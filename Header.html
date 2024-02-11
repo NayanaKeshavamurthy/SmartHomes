@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>SH</title>
+<link rel = "icon" href = "images/logo.jpg" type="image/x-icon">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- Links for Jquery and bootstrap css -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"> </script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"> </script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+  
+
+  <style>
+	* {
+			box-sizing : unset;
+		}
+		
+	.col-md-6{
+			width : 45% ! important;
+		}
+	</style>
+
+
+
+</head>
+
+<body>
+	
+	<div class="container">
+		<!-- The name of the company goes here -->
+		
+		<header>
+			
+			<h1><span><img src="images/logo.jpg" style="width:40px;height:50px;margin:2px;padding-bottom:6px;"></span><a href="#">SMART<span style="color:#799AC0;">HOMES</span></a></h1>
+		</header>
+		<!-- the navigation bar starts here, the remaining items are added according to the session value from utilites servlet -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid" id="menu">
+				<ul class="nav navbar-nav">
+					<li><a href="Home" class="first"><span class="glyphicon glyphicon-home">Home</span></a></li>
+					<li><a href="DoorBellsList"><span class="glyphicon">Smart-Doorbells</span></a></li>
+					<li><a href="DoorLocksList"><span class="glyphicon">Smart-Doorlocks </span></a></li>
+					<li><a href="SpeakersList"><span class="glyphicon">Smart-Speakers</span></a></li>
+					<li><a href="LightingsList"><span class="glyphicon">Smart-Lightings</span></a></li>
+					<li><a href="ThermostatsList"><span class="glyphicon">Smart-Thermostats</span></a></li>
+					<li><a href="Trending"><span class="glyphicon">Trending</span></a></li>
+					<li><div style="margin-left : 70px !important"><span class="glyphicon glyphicon-search" style="padding: 5px; font-size: 16px;"></span>
+						<input type="text" name="searchId" value="" class="input"
+						id="searchId" onkeyup="doCompletion()" 
+						placeholder="Search for products.." style="padding: 5px 10px 5px 10px; font-size: 16px;margin-left: 5px;width: 400px;" />
+					<div id="auto-row">
+						<table id="complete-table" class="gridtable"
+							style="position: absolute; width: 400px;"></table></div></li>
+				</ul>
+			</div>
+		

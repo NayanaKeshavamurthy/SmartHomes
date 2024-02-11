@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>SH</title>
+<link rel = "icon" href = "images/logo.jpg" type="image/x-icon">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- Links for Jquery and bootstrap css -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript"></script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['table']});
+  google.charts.setOnLoadCallback(drawTable);
+
+  function drawTable() {
+
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('string', 'Product Name');
+	data.addColumn('number', 'Price');
+	data.addColumn('number', 'Quantity');
+
+	var res = $.ajax({
+		   url: "FetchProducts",
+		   async: false,
+		   dataType: "json"
+	}).responseText;
+
+	var resultJson1=JSON.parse(res);
+	console.log("Json result is " + resultJson1);
+
+	for(var i=0;i<resultJson1.length;i++){
+		var products = [];
+		products.push(resultJson1[i]["name"],resultJson1[i]["price"],resultJson1[i]["quantity"]);
+		data.addRow(products);
+	   }
+	var table = new google.visualization.Table(document.getElementById('table_allProds'));
+	var formatter = new google.visualization.NumberFormat(
+    {prefix: '$', negativeColor: 'red', negativeParens: true});
+	formatter.format(data,1);
+	//var formatter = new google.visualization.PatternFormat('<a href="mailto:{1}">{0}</a>');
+	table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+  }
+</script>
+<script type="text/javascript">
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawProductChart);
+
+  function drawProductChart() {
+
+	  var table = new google.visualization.DataTable();
+	  table.addColumn('string','Product Name');
+	  table.addColumn('number','Total Inventory');
+	  var result = $.ajax({
+			 url: "FetchProducts",
+			 async: false,
+			 dataType: "json"
+	  }).responseText;
+
+	  var resultJson=JSON.parse(result);
+
+	  for(var i=0;i<resultJson.length;i++){
+		 table.addRow([resultJson[i]["name"],resultJson[i]["quantity"]]);
+	   }
+
+	  var options = {
+		   width: 800,
+		  height: 1000,
+		  'is3D':true,
+		  title: "All Products Inventory Plot",
+		  colors: ['#bc5090'],
+		//   bar: {groupWidth: "42%"},
+		  legend: { position: "none" }
+	  };
+
+	  var an = new google.visualization.BarChart(document.getElementById('inventory_barchart'));
+
+	  an.draw(table,options);
+	}
+  </script>
+<script type="text/javascript">
+	google.charts.load('current', {'packages':['table']});
+	google.charts.setOnLoadCallback(drawSaleTable);
+  
+	function drawSaleTable() {
+  
+  
+	  var data = new google.visualization.DataTable();
+	  data.addColumn('string', 'Product Name');
+	  data.addColumn('number', 'Price');
+	  data.addColumn('number', 'Quantity');
+	  data.addColumn('number', 'Product discount');
+  
+	  var res = $.ajax({
+			 url: "FetchProducts",
+			 async: false,
+			 dataType: "json"
+	  }).responseText;
+  
+	  var resultJson1=JSON.parse(res);
+	  console.log("Json result is " + resultJson1);
+  
+	  for(var i=0;i<resultJson1.length;i++){
+		  
+		  if(resultJson1[i]["isSale"] == true)
+		  {
+		  var products = [];
+		  data.addRow([resultJson1[i]["name"],resultJson1[i]["price"],resultJson1[i]["quantity"],resultJson1[i]["discounAmt"]]);
+		  }
+			//test.add(resultJson1[i]["name"],resultJson1[i]["price"],resultJson1[i]["quantity"]);
+		 }
+	  var table = new google.visualization.Table(document.getElementById('table_SaleProds'));
+	  var formatter = new google.visualization.NumberFormat(
+    	{prefix: '$', negativeColor: 'red', negativeParens: true});
+		formatter.format(data,1);
+		var formatter1 = new google.visualization.NumberFormat({suffix : '%'});
+		formatter1.format(data,3);
+		var formatter2 = new google.visualization.ArrowFormat();
+		formatter2.format(data, 3);
+	  table.draw(data, {allowHtml: true,showRowNumber: true, width: '100%', height: '100%'});
+	}
+  </script>
+<script type="text/javascript">
+	google.charts.load('current', {'packages':['table']});
+	google.charts.setOnLoadCallback(drawRebateTable);
+  
+	function drawRebateTable() {
+  
+  
+	  var data = new google.visualization.DataTable();
+	  data.addColumn('string', 'Product Name');
+	  data.addColumn('number', 'Price');
+	  data.addColumn('number', 'Quantity');
+  
+	  var res = $.ajax({
+			 url: "FetchProducts",
+			 async: false,
+			 dataType: "json"
+	  }).responseText;
+	  
+	  var resultJson1=JSON.parse(res);
+  
+	  for(var i=0;i<resultJson1.length;i++){
+		  
+		  if(resultJson1[i]["isRebate"] == true)
+		  {
+		  var products = [];
+		  data.addRow([resultJson1[i]["name"],resultJson1[i]["price"],resultJson1[i]["quantity"]]);
+		  }
+			//test.add(resultJson1[i]["name"],resultJson1[i]["price"],resultJson1[i]["quantity"]);
+		 }
+	  var table = new google.visualization.Table(document.getElementById('table_RebateProds'));
+	  var formatter = new google.visualization.NumberFormat(
+    	{prefix: '$', negativeColor: 'red', negativeParens: true});
+		formatter.format(data,1);
+	  table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+	}
+  </script>
+  <script type="text/javascript">
+	google.charts.load('current', {'packages':['table']});
+	google.charts.setOnLoadCallback(drawTable);
+  
+	function drawTable() {
+  
+  
+	  var data = new google.visualization.DataTable();
+	  data.addColumn('string', 'Product Name');
+	  data.addColumn('number', 'Price');
+	  data.addColumn('number', 'Number of items sold');
+	  data.addColumn('number', 'Total Sales of the product');
+  
+	  var res = $.ajax({
+			 url: "FetchSales",
+			 async: false,
+			 dataType: "json"
+	  }).responseText;
+  
+	  var resultJson1=JSON.parse(res);
+  
+	  for(var i=0;i<resultJson1.length;i++){
+		  data.addRow([resultJson1[i]["name"],resultJson1[i]["price"],resultJson1[i]["quantity"],resultJson1[i]["discounAmt"]]);
+		 }
+	  var table = new google.visualization.Table(document.getElementById('table_allSales'));
+	  var formatter = new google.visualization.NumberFormat(
+	  {prefix: '$', negativeColor: 'red', negativeParens: true});
+	  formatter.format(data,1);
+	  formatter.format(data,3);
+	  //var formatter = new google.visualization.PatternFormat('<a href="mailto:{1}">{0}</a>');
+	  table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+	}
+  </script>
+  <script type="text/javascript">
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawSalesChart);
+
+  function drawSalesChart() {
+
+	  var table = new google.visualization.DataTable();
+	  table.addColumn('string','Product Name');
+	  table.addColumn('number','Total Sales');
+	  var result = $.ajax({
+			 url: "FetchSales",
+			 async: false,
+			 dataType: "json"
+	  }).responseText;
+
+	  var resultJson=JSON.parse(result);
+
+	  for(var i=0;i<resultJson.length;i++){
+		 table.addRow([resultJson[i]["name"],resultJson[i]["quantity"]]);
+	   }
+
+	  var options = {
+		  width: 850,
+		  height: 1000,
+		  'is3D':true,
+		  title: "Product Sales",
+		  bar: {groupWidth: "42%"},
+		  colors: ['#bc5090'],
+		  legend: { position: "none" }
+	  };
+
+	  var an = new google.visualization.BarChart(document.getElementById('total_Sales_barchart'));
+
+	  an.draw(table,options);
+	}
+  </script>
+  <script type="text/javascript">
+	google.charts.load('current', {'packages':['table']});
+	google.charts.setOnLoadCallback(drawDailySalesTable);
+  
+	function drawDailySalesTable() {
+  
+  
+	  var data = new google.visualization.DataTable();
+	  data.addColumn('string', 'Date');
+	  data.addColumn('number', 'Price');
+  
+	  var res = $.ajax({
+			 url: "FetchDailySales",
+			 async: false,
+			 dataType: "json"
+	  }).responseText;
+  
+	  var resultJson1=JSON.parse(res);
+  
+	  for(var i=0;i<resultJson1.length;i++){
+		  data.addRow([resultJson1[i]["name"],resultJson1[i]["price"]]);
+		 }
+	  var table = new google.visualization.Table(document.getElementById('table_DailySales'));
+	  var formatter = new google.visualization.NumberFormat(
+	  {prefix: '$', negativeColor: 'red', negativeParens: true});
+	  formatter.format(data,1);
+	  table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+	}
+  </script>
+
+
+</head>
+<body>
+	
+	<div class="container">
+		<!-- The name of the company goes here -->
+		
+		<header>
+			
+			<h1><span><img src="images/logo.jpg" style="width:40px;height:50px;margin:2px;padding-bottom:6px;"></span><a href="#">SMART<span style="color:#799AC0;">HOMES</span></a></h1>
+		</header>
+		<!-- the navigation bar starts here, the remaining items are added according to the session value from utilites servlet -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid" id="menu">
+				<!-- <ul class="nav navbar-nav">
+					<li><a href="HomeSM" class="first"><span class="glyphicon glyphicon-home">Home</span></a></li>
+					<li><a href="DoorBellsList"><span class="glyphicon">Smart-Doorbells</span></a></li>
+					<li><a href="DoorLocksList"><span class="glyphicon">Smart-Doorlocks</span></a></li>
+					<li><a href="SpeakersList"><span class="glyphicon">Smart-Speakers</span></a></li>
+					<li><a href="LightingsList"><span class="glyphicon">Smart-Lightings</span></a></li>
+					<li><a href="ThermostatsList"><span class="glyphicon">Smart-Thermostats</span></a></li>
+				</ul> -->
+			<!-- </div> --> 
+			
+			<!-- <div style="float: right;" class="nav navbar-nav"> -->
+				<ul class="nav navbar-nav" style="align-items: center;margin-left: 10%;">
+          <li class="start selected"><a href="HomeSM">Home</a></li>
+          <li><a href="AddProductPage">Add Product</a></li>
+          <li><a href="ProductUpdatePage">Update Product</a></li>
+          <li><a href="ProductDeletePage">Delete Product</a></li>
+          <li><a href="SMLogout">Sign Out</a></li>
+			</ul>
+		</div>
+		</nav>
+		<div id="post" style="margin-left:20px">
+		
+		<!-- end #menu -->

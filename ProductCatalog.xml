@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ProductCatalog>
+
+    <DoorbellsCatalog>
+        <doorbells id="ringwired">
+                <name>Ring - Wi-Fi Video Doorbell - Wired - Black</name>
+                <price>64.99</price>
+                <image>Ring_WiFi_VideoDoorbell_Wired_Black.jpg</image>
+                <description>It has a Camera Resolution of 1920 x 1080 and Works With Amazon Alexa, Ring</description>
+                <manufacturer>Ring</manufacturer>
+                <condition>New</condition>
+                <discount>26.0</discount>
+        </doorbells>
+        <doorbells id="ringwireless">
+                <name>Ring 1080p Wireless Video Doorbell</name>
+                <price>99.99</price>
+                <image>ring2.jpg</image>
+                <description> It has a Camera Resolution of 1080 x 1440 and a Image Sensor Type of PIR Sensor and is compatible With Amazon Alexa.</description>
+                <manufacturer>Ring</manufacturer>
+                <condition>New</condition>
+                <discount>20.0</discount>
+       </doorbells>
+        <doorbells id="googlenest">
+            <name>Google - Nest Doorbell Wired (2nd Generation)</name>
+            <price>179.99</price>
+            <image>Google_Nest_Doorbell_Wired.jpg</image>
+            <manufacturer>Google</manufacturer>
+            <description>It has a Camera Resolution of 960 x 1280 and Works With Amazon Alexa, Google Assistant and Nest.</description>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </doorbells>
+        <doorbells id="arlowired">
+            <name>Arlo Essential 1080p Wired Video Doorbell</name>
+            <price>129.99</price>
+            <image>Arlo_wired_video_doorbell.png</image>
+            <description>It has a Camera Resolution of 1536 x 1536 and Works With Amazon Alexa, Google Assistant, SmartThings.</description>
+            <manufacturer>Arlo</manufacturer>
+            <condition>Refurbished</condition>
+            <discount>80.0</discount>
+        </doorbells>
+        <doorbells id="arlowireless">
+            <name>Arlo - Essential Wireless Video Doorbell</name>
+            <price>149.99</price>
+            <image>Arlo_wireless_video_doorbell.png</image>
+            <description>It has a Camera Resolution of 1536 x 1536 and has a Single Motion Sensor, 110 degree horizontal.</description>
+            <manufacturer>Arlo</manufacturer>
+            <condition>New</condition>
+            <discount>50.0</discount>
+        </doorbells>
+        <doorbells id="blinkvideo">
+            <name>Blink Video Doorbell</name>
+            <price>59.99</price>
+            <image>blink.jpg</image>
+            <description>It has 135° horizontal, 80° vertical field of view and can record and view in 1080p HD video during the day and with infrared HD night vision after dark.</description>
+            <manufacturer>Blink</manufacturer>
+            <condition>New</condition>
+            <discount>4.0</discount>
+        </doorbells>
+    </DoorbellsCatalog>
+
+    <!-- Smart Doorbells end -->
+
+    <DoorlocksCatalog>
+        <doorlocks id="yaleassure1">
+            <name>Yale Assure Lock 2 Keypad with Bluetooth</name>
+            <price>159.99</price>
+            <image>yale_assure_lock2.jpg</image>
+            <description> It has Touchscreen Keypad and no locksmith is needed. It provided Key-free access.</description>
+            <manufacturer>Yale</manufacturer>
+            <condition>New</condition>
+            <discount>10.0</discount>
+        </doorlocks>
+        <doorlocks id="nestxyale">
+            <name>Nest x Yale Lock with Nest Connect</name>
+            <price>279.00</price>
+            <image>nestx_yale_lock.jpg</image>
+            <description> It is Tamper-proof key free and connected deadbolt lock with a Remote control from the Nest app.</description>
+            <manufacturer>Yale</manufacturer>
+            <condition>New</condition>
+            <discount>29.0</discount>
+        </doorlocks>
+        <doorlocks id="simplisafesmartlock">
+            <name>SimpliSafe-Smart Lock Wi-Fi</name>
+            <price>119.99</price>
+            <image>simplisafe_smartlock.jpg</image>
+            <description>It works with SimpliSafe security system and is compatible with smart home devices.</description>
+            <manufacturer>SimpliSafe</manufacturer>
+            <condition>New</condition>
+            <discount>4.0</discount>
+        </doorlocks>
+        
+        <doorlocks id="philipslock">
+            <name>Philips Smart Lock</name>
+            <price>179.99</price>
+            <image>philips_smart_lock.jpg</image>
+            <description>The Safety provided is standard and has ultra-long battery life and it is Simple sharing.</description>
+            <manufacturer>Philips</manufacturer>
+            <condition>Refurbished</condition>
+            <discount>40.0</discount>
+        </doorlocks>
+        <doorlocks id="yaleassure">
+            <name>YALE ASSURE YRL226-ZW2</name>
+            <price>271.94</price>
+            <image>yale2.jpg</image>
+            <description>It has touchscreen keypad with backlit numbers that wont wear off and Pushbutton model is available with Weather Protection Gasket.</description>
+            <manufacturer>Yale</manufacturer>
+            <condition>New</condition>
+            <discount>2.0</discount>
+        </doorlocks>
+    </DoorlocksCatalog>
+
+    <!-- Smart Doorlocks end -->
+
+    <LightingsCatalog>
+        <lightings id="Philipslight">
+                <name>Philips Hue Fair Ceiling Light</name>
+                <price>269.99</price>
+                <image>Philips_Hue_Fair_Ceiling_light.jpg</image>
+                <description>It has Zigbee Light Link wireless protocol	and Estimated Lifetime of25,000 hours / 50,000 switching cycles.</description>
+                <manufacturer>Philips</manufacturer>
+                <condition>New</condition>
+                <discount>5.0</discount>
+        </lightings>
+        <lightings id="gowinglight">
+                <name>Gowing Smart Ceiling Light Fixture Flush Mount LED</name>
+                <price>48</price>
+                <image>gowing_ceiling_fixture_bedroom.jpg</image>
+                <description>It has a Ceiling Mount Switch Installation Type and has a Luminous Flux of 2400 Lumen.</description>
+                <manufacturer>Gowing</manufacturer>
+                <condition>Refurbished</condition>
+                <discount>12.0</discount>
+        </lightings>
+
+        <lightings id="et2hive">
+                <name>ET2 Hive 8" Wide Mini Pendant</name>
+                <price>118</price>
+                <image>ET2_Hive_LED.jpg</image>
+                <description>It is made of Concrete and has a Fixture Height of 7" and Lumens of 490.</description>
+                <manufacturer>ET2</manufacturer>
+                <condition>New</condition>
+                <discount>6.0</discount>
+        </lightings>
+
+        <lightings id="et2icorona">
+                <name>ET2 iCorona 18" Wide LED Flush Mount Drum Smart Ceiling Fixture - 277</name>
+                <price>898</price>
+                <image>ET2_2.jpg</image>
+                <description>It has Lumens of 2400 and a color Rendering Index of 90 CRI.</description>
+                <manufacturer>ET2</manufacturer>
+                <condition>New</condition>
+                <discount>8.0</discount>
+        </lightings>
+
+        <lightings id="et2chimes">
+                <name>ET2 Chimes 15" Tall LED Bathroom Sconce</name>
+                <price>478</price>
+                <image>ET2_3.jpg</image>
+                <description>It is Constructed from steel and includes a metal shade. It also has a integrated LED lighting.</description>
+                <manufacturer>ET2</manufacturer>
+                <condition>New</condition>
+                <discount>3.0</discount>
+        </lightings>
+
+        <!-- lightings end -->
+
+        <!-- smart speakers start -->
+    <SpeakersCatalog>
+        <speakers id="echodot">
+                <name>Echo Dot (5th Gen, 2022 release) with clock</name>
+                <price>59.99</price>
+                <image>echodot.jpg</image>
+                <description>It has a LED Display and Smart Home Device Compatibility with WiFi, Bluetooth Low Energy Mesh, and Matter.</description>
+                <manufacturer>Amazon</manufacturer>
+                <condition>New</condition>
+                <discount>2.0</discount>
+        </speakers>
+
+        <speakers id="bosespeaker">
+                <name>Bose Home Speaker 500: Smart Bluetooth Speaker</name>
+                <price>379.99</price>
+                <image>bose.jpg</image>
+                <description>It has Built-in Alexa and bose music app and also bose simplesync technology.</description>
+                <manufacturer>Bose</manufacturer>
+                <condition>New</condition>
+                <discount>4.0</discount>
+        </speakers>
+
+        <speakers id="sonosone">
+                <name>Sonos One</name>
+                <price>219</price>
+                <description>It has features of voice enabled, touch controls and humidity resistant.</description>
+                <image>sonos_one.jpg</image>
+                <manufacturer>Sonos</manufacturer>
+                <condition>New</condition>
+                <discount>4.0</discount>
+        </speakers>
+
+        <speakers id="applemini">
+                <name>Apple HomePod mini</name>
+                <price>99.99</price>
+                <description>It has Surprising sound for its size and five colors to brighten up any space. Siri is the familys intelligent assistant.</description>
+                <image>homepod_mini.jpg</image>
+                <manufacturer>Apple</manufacturer>
+                <condition>Refurbished</condition>
+                <discount>20.0</discount>
+        </speakers>
+
+        <speakers id="echodot2">
+                <name>Amazon - Echo Dot (3rd Gen) - Smart Speaker with Alexa</name>
+                <price>38.98</price>
+                <description>It is a Smart speaker with microphone of 4 microphones array.</description>
+                <image>echodot_2.jpg</image>
+                <manufacturer>Amazon</manufacturer>
+                <condition>New</condition>
+                <discount>3.0</discount>
+        </speakers>
+
+        <speakers id="applehomepod">
+                <name>Apple Homepod</name>
+                <price>299.99</price>
+                <description>It has 4-inch high-excursion woofer with an Array of five horn-loaded tweeters, each tweeter with its own neodymium magnet.</description>
+                <image>apple_2.png</image>
+                <manufacturer>Apple</manufacturer>
+                <condition>New</condition>
+                <discount>2.0</discount>
+        </speakers>
+
+    </SpeakersCatalog>
+
+    <!-- smart thermostats start -->
+
+    <ThermostatsCatalog>
+
+        <thermostats id="googlenest">
+                <name>Google - Nest Learning Smart Wifi Thermostat</name>
+                <price>249.99</price>
+                <image>google_nest_learning_smart_wifi.jpg</image>
+                <description>It has feature of Control from anywhere with the app, and also has Heating and cooling system care.</description>
+                <manufacturer>Google</manufacturer>
+                <condition>New</condition>
+                <discount>4.0</discount>
+        </thermostats>
+        <thermostats id="echobeelite">
+                <name>Echobee3 Lite Smart Thermostat</name>
+                <price>146.88</price>
+                <image>echobee3_Lite_Smart.jpg</image>
+                <description>It can Automatically pause your heating or cooling and can Add SmartSensor to manage hot or cold spots.</description>
+                <manufacturer>Echobee</manufacturer>
+                <condition>Refurbished</condition>
+                <discount>46.88</discount>
+        </thermostats>
+        <thermostats id="mysasmart">
+                <name>Mysa Smart Thermostat</name>
+                <price>139.99</price>
+                <image>Mysa_Smart_Thermostat.png</image>
+                <description>It is mainly used for ductless mini-split heat pumps + portable and window AC and can be controlled from anywhere with FREE mobile app.</description>
+                <manufacturer>Mysa</manufacturer>
+                <condition>New</condition>
+                <discount>4.0</discount>
+        </thermostats>
+        <thermostats id="amazonsmart">
+                <name>Amazon Smart Thermostat</name>
+                <price>79.99</price>
+                <image>Amazon_Smart_Thermostat.jpg</image>
+                <description>It has smart upgrade and automatic control.</description>
+                <manufacturer>Amazon</manufacturer>
+                <condition>New</condition>
+                <discount>1.0</discount>
+        </thermostats>
+    </ThermostatsCatalog>
+
+    <AccessoryCatalog>
+
+        <accessory id="raincover">
+            <name>HomeAll Doorbell Rain Cover, Keypad Cover</name>
+            <price>23.86</price>
+            <image>rain_cover.jpg</image>
+            <manufacturer>doorbell</manufacturer>
+            <condition>New</condition>
+            <discount>3.0</discount>
+        </accessory>
+
+         <accessory id="wedgemount">
+            <name>Blink Video Doorbell Wedge Mount</name>
+            <price>10.99</price>
+            <image>wedge_mount.jpg</image>
+            <manufacturer>doorbell</manufacturer>
+            <condition>New</condition>
+            <discount>3.0</discount>
+        </accessory>
+         <accessory id="mountit">
+            <name> Mount-It! Premium Echo Stand Holder</name>
+            <price>16.99</price>
+            <image>mountit.jpg</image>
+            <manufacturer>speaker</manufacturer>
+            <condition>New</condition>
+            <discount>2.0</discount>
+        </accessory>
+         <accessory id="holder">
+            <name>Stainless Steel Stand Smart Speaker Metal Base Pad Holder</name>
+            <price>13.99</price>
+            <image>holder.jpg</image>
+            <manufacturer>speaker</manufacturer>
+            <condition>New</condition>
+            <discount>1.30</discount>
+        </accessory>
+
+         <accessory id="philips_2">
+            <name>Philips Hue Wall Switch Module</name>
+            <price>44.99</price>
+            <image>philips_2.jpg</image>
+            <manufacturer>lighting</manufacturer>
+            <condition>New</condition>
+            <discount>4.0</discount>
+        </accessory>
+
+         <accessory id="philips_3">
+            <name>Philips Hue Tap Dial Switch</name>
+            <price>49.99</price>
+            <image>philips_3.jpg</image>
+            <manufacturer>lighting</manufacturer>
+            <condition>New</condition>
+            <discount>4.30</discount>
+        </accessory>
+
+    
+    </AccessoryCatalog>
+
+</ProductCatalog>
